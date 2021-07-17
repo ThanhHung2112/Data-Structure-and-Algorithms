@@ -20,6 +20,7 @@ mmergesort<-function(A) {
   } else {
     A
   }}
-
 x<-c(18, 16, 8, 7, 6, 3, 11, 9, 15, 1)
 mmergesort(x)
+
+ceiling(length(x)/2)

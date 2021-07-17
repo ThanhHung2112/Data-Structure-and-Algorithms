@@ -14,3 +14,4 @@ insertion_sort <- function(A){
 
 x <- c(1,2,34,35,12,43,12,1)
 insertion_sort(x)
+

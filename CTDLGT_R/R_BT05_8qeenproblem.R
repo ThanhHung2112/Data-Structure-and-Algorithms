@@ -1,9 +1,12 @@
 #rstats #8queens #222characters #codegolf #tidyverse
-install.packages("tidyverse")
+#install.packages("tidyverse")
 library(tidyverse)
+
 f=function(q){L=length(q)
-if(L==8){return(q)}
-flatten(map(setdiff(1:8,c(q,c(q+L:1,q-L:1))),~f(c(q,.x))))}
+if(L==8) { return(q)}
+flatten( map( setdiff (1:8,c(q,c(q+L:1,q-L:1))),~f(c(q,.x))))
+}
+
 s=data.frame(c=unlist(f(c())),r=1:8,x=rep(1:92,e=8))
 ggplot(s)+geom_tile(aes(r,c))+facet_wrap(~x)
 
@@ -41,3 +44,4 @@ place_queen <- function(queens) {
 
 # Start with no queens placed
 place_queen(c())
+

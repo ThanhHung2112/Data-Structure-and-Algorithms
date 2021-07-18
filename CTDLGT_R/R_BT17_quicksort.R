@@ -10,3 +10,17 @@ quick_sort<-function(x){
 x <- c(5,4,12,13,3,8,88)
 quick_sort(x)
 
+
+x <- rest[rest<pivot]
+x
+length(x)
+if (length(x)<=1) x 
+pivot<-x[1]
+pivot
+rest<-x[-1]
+rest
+rest[rest<pivot]
+rest[rest>=pivot]
+pivot_less<-quick_sort(rest[rest<pivot])
+pivot_greater<-quick_sort(rest[rest>=pivot])
+c(pivot_less,pivot,pivot_greater)
